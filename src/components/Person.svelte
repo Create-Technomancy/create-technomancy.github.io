@@ -5,6 +5,7 @@
     const { avatar, name, github }: { avatar: string; name: string; github?: string } = $props();
 
     let isInView = $state(false);
+    const animDelay = Math.random() * 200;
 
     const inviewOpts: Options = {
         unobserveOnEnter: true,
@@ -24,7 +25,7 @@
     >
         {#if isInView}
             <a
-                in:fly={{ x: 20, delay: Math.random() * 300 }}
+                in:fly={{ x: 20, delay: animDelay }}
                 href="https://github.com/{github}"
                 target="_blank"
                 class="flex flex-col items-center justify-start bg-slate-9 py-4 w-full h-full rounded-lg transition-all hover:scale-110 hover:bg-slate-8 cursor-pointer decoration-none color-white"
@@ -45,7 +46,7 @@
     >
         {#if isInView}
             <div
-                in:fly={{ x: 20, delay: Math.random() * 300 }}
+                in:fly={{ x: 20, delay: animDelay }}
                 class="w-full h-full flex flex-col items-center justify-start bg-slate-9 py-4 rounded-lg decoration-none color-white"
             >
                 <img class="w-60 rounded-lg h-60 object-cover object-top" src={avatar} alt={name} />

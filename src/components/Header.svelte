@@ -2,7 +2,9 @@
     import logo from "../assets/logo.gif";
 </script>
 
-<div class="w-full fixed z-10 flex flex-row items-center justify-between bg-dark b-b-solid b-softwhite b-b-1">
+<div
+    class="w-full fixed z-10 flex flex-row items-center justify-between bg-dark b-b-solid b-softwhite b-b-1"
+>
     <div class="flex flex-row items-center justify-start">
         <a
             class="p-2 ml-2 mr-4 flex flex-row items-center justify-start text-white font-ubuntu decoration-none"

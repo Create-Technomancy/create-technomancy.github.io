@@ -21,7 +21,7 @@
         <BlogSection title="The Prelude" authors={["RedstoneWizard08"]} />
 
         <h4>What's up?</h4>
-        
+
         <p>
             Hi everyone! I'm RedstoneWizard08, the second-newest member of the Technomancy team at
             the time of writing. I've been leading the Architectury port of the mod and designing

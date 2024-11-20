@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs";
+import crypto from "crypto";
 import type { Plugin } from "vite";
 
 export type AllRenders = "full" | "bust" | "face";
@@ -51,9 +52,15 @@ export const starlightSkinPlugin = (): Plugin => {
     const prefix = "starlight-skin:";
     const base = path.dirname(import.meta.dirname);
     const cacheDir = path.join(base, "node_modules", ".cache", "vite", "starlight-skin-api");
+    const srcDir = path.join(base, "src", "assets");
+    const outputDir = path.join(srcDir, "starlight-skin-cache");
 
     if (!fs.existsSync(cacheDir)) {
         fs.mkdirSync(cacheDir, { recursive: true });
+    }
+
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
     }
 
     const downloadSkin = async (username: string, renderType: string, cropping: string) => {
@@ -75,11 +82,7 @@ export const starlightSkinPlugin = (): Plugin => {
     return {
         name: "starlight-skin-api",
 
-        resolveId(id) {
-            if (id.startsWith(prefix)) return id;
-        },
-
-        async load(id) {
+        async resolveId(id) {
             if (id.startsWith(prefix)) {
                 const raw = id.slice(prefix.length);
                 const [username, renderType, cropping] = raw.split("/");
@@ -87,8 +90,12 @@ export const starlightSkinPlugin = (): Plugin => {
                 if (!username || !renderType || !cropping) return;
 
                 const data = await downloadSkin(username, renderType, cropping);
+                const md5 = crypto.createHash("md5").update(Buffer.from(data)).digest("hex");
+                const file = path.join(outputDir, md5 + ".png");
 
-                return `export default \`data:image/png;base64,${Buffer.from(data).toString("base64")}\``;
+                if (!fs.existsSync(file)) fs.writeFileSync(file, Buffer.from(data));
+
+                return file;
             }
         },
     };

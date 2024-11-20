@@ -14,6 +14,11 @@ export default defineConfig({
         sveltekit(),
     ],
 
+    build: {
+        minify: "terser",
+        cssMinify: "lightningcss",
+    },
+
     server: process.env.REDSTONE_IS_DUMB
         ? {
               port: 4000,
