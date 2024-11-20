@@ -2,6 +2,7 @@
     import moment from "moment";
     import BlogHead from "../../../components/blogs/BlogHead.svelte";
     import BlogSection from "../../../components/blogs/BlogSection.svelte";
+    import MetaTags from "../../../components/MetaTags.svelte";
 
     const blogInfo = {
         title: "We are so back!",
@@ -12,6 +13,11 @@
 
 <svelte:head>
     <title>We are so back | Create Technomancy</title>
+
+    <MetaTags
+        title="We are so back"
+        desc="We're back! After what seems like forever with this mod being dead, we're finally back!"
+    />
 </svelte:head>
 
 <div class="w-full min-h-screen flex flex-col items-center justify-center bg-img-technomancy mt-16">

@@ -1,8 +1,14 @@
 <script lang="ts">
+    import MetaTags from "../../components/MetaTags.svelte";
 </script>
 
 <svelte:head>
-    <title>Blogs | Create Technomancy</title>
+    <title>Blog Posts | Create Technomancy</title>
+
+    <MetaTags
+        title="Blog Posts"
+        desc="Blog posts, sneak peeks, and status updates for Create Technomancy!"
+    />
 </svelte:head>
 
 <div class="w-full min-h-screen flex flex-col items-center justify-start bg-img-technomancy">

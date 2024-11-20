@@ -17,6 +17,8 @@
         emma,
         happyg,
     } from "$lib/team";
+
+    import MetaTags from "../../components/MetaTags.svelte";
     import Person from "../../components/Person.svelte";
 
     const team = [
@@ -44,6 +46,7 @@
 
 <svelte:head>
     <title>Our Team | Create Technomancy</title>
+    <MetaTags title="Our Team" desc="A list of the incredible members of our team!" />
 
     {#each [...team, ...contributors] as people}
         <link rel="preload" as="image" href={people.avatar} />
