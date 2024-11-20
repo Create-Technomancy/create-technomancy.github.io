@@ -3,6 +3,7 @@
 
 <svelte:head>
     <title>Create Technomancy</title>
+    <meta name="description" content="A Create addon blending the themes of magic and technology into one!" />
 </svelte:head>
 
 <div class="w-full min-h-screen flex flex-col items-center justify-start bg-img-technomancy">

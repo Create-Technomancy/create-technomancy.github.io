@@ -1,6 +1,8 @@
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig } from "vite";
 import { starlightSkinPlugin } from "./vite/starlight-skins";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { imagetools } from "vite-imagetools";
 import uno from "@unocss/svelte-scoped/vite";
 
 export default defineConfig({
@@ -12,6 +14,8 @@ export default defineConfig({
         }),
         starlightSkinPlugin(),
         sveltekit(),
+        imagetools(),
+        ViteImageOptimizer(),
     ],
 
     build: {

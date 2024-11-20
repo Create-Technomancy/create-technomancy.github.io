@@ -3,7 +3,6 @@ import presetAnim from "unocss-preset-animations";
 import extractSvelte from "@unocss/extractor-svelte";
 import presetIcons from "@unocss/preset-icons";
 import presetWebFonts from "@unocss/preset-web-fonts";
-// import { createLocalFontProcessor } from "@unocss/preset-web-fonts/local";
 
 export default defineConfig({
     presets: [
@@ -13,12 +12,6 @@ export default defineConfig({
             fonts: {
                 ubuntu: "Ubuntu",
             },
-
-            // processors: createLocalFontProcessor({
-            //     cacheDir: "node_modules/.cache/unocss/fonts",
-            //     fontAssetsDir: "public/assets/fonts",
-            //     fontServeBaseUrl: "/assets/fonts",
-            // }),
         }),
 
         presetIcons(),
