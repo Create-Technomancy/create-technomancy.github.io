@@ -57,7 +57,7 @@
         </p>
 
         <iframe
-            class="w-full h-md"
+            class="w-full h-50 md:h-70 lg:h-md"
             src="https://www.youtube.com/embed/pEE2mvc81Yg"
             title="WE ARE SO BACK"
             frameborder="0"
