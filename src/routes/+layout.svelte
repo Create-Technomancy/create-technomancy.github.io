@@ -3,6 +3,7 @@
     import logo from "../assets/logo.gif";
     import background from "../assets/background.png";
     import Header from "../components/Header.svelte";
+    import Footer from "../components/Footer.svelte";
 
     const { children } = $props();
 </script>
@@ -18,4 +19,5 @@
 <div class="w-full h-full p-0 m-0 b-0 flex flex-col items-start justify-start">
     <Header />
     {@render children()}
+    <Footer />
 </div>

@@ -23,14 +23,14 @@
 
         <div class="w-full flex flex-row items-center justify-center space-x-4">
             <a
-                href="/team"
-                class="p-3 px-4 bg-slate-8 text-white decoration-none hover:bg-slate-9 transition-all rounded-lg"
-                >Our Team</a
-            >
-            <a
                 href="/blogs"
                 class="p-3 px-4 bg-slate-8 text-white decoration-none hover:bg-slate-9 transition-all rounded-lg"
                 >Blog Posts</a
+            >
+            <a
+                href="/team"
+                class="p-3 px-4 bg-slate-8 text-white decoration-none hover:bg-slate-9 transition-all rounded-lg"
+                >Our Team</a
             >
         </div>
     </div>

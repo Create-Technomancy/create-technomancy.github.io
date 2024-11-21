@@ -1,8 +1,5 @@
 name: Deploy to GitHub Pages
-
-on:
-    workflow_dispatch:
-    push:
+on: [workflow_dispatch, push]
 
 jobs:
     build:

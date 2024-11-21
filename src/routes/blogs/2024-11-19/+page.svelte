@@ -20,7 +20,9 @@
     />
 </svelte:head>
 
-<div class="w-full min-h-screen flex flex-col items-center justify-center bg-img-technomancy mt-16">
+<div
+    class="w-full min-h-screen flex flex-col items-center justify-center bg-img-technomancy mt-16 mb-8"
+>
     <article class="font-ubuntu md:w-[50%] w-[75%] bg-slate-7 p-8 my-8 rounded-lg blog-post">
         <BlogHead {...blogInfo} />
 

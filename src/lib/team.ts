@@ -30,6 +30,11 @@ import happyg from "starlight-skin:ac5c0ca7-fdd2-4c3a-a24b-2602169f4ec3/criss_cr
 // Maxigineer (2534d36c-24e0-45d6-ac4b-846fe3eb7abc)
 // Robotix (89b0f78e-49fa-47cf-9774-12f115ba4896)
 // EmmaTheMartian (b4233b09-65f8-4037-9b37-cf5c1b2be13c)
+// LlamaMann_ (LlamaMan) (a9723136-ee52-4182-98a7-d0aec15a9e24)
+// KaiCoyote (?)
+// shBLOCK (?)
+// Spydnel (7e881452-4b55-4327-ba8f-037b8f568f85)
+// DrMangoTea (4806d760-2352-4975-829c-b48b2788efcd)
 
 import luna from "starlight-skin:ab49cc7b-53e9-424e-8fa1-778186ffae33/criss_cross/bust";
 import kali from "starlight-skin:8c99ebd8-dbd4-4c9d-a215-cfadaa05a326/cheering/bust";
@@ -37,6 +42,11 @@ import milky from "starlight-skin:66a11b55-08c2-4765-b618-3071dc222b64/relaxing/
 import max from "starlight-skin:2534d36c-24e0-45d6-ac4b-846fe3eb7abc/lunging/bust";
 import robotix from "starlight-skin:89b0f78e-49fa-47cf-9774-12f115ba4896/crossed/bust";
 import emma from "starlight-skin:b4233b09-65f8-4037-9b37-cf5c1b2be13c/pointing/bust";
+import llama from "starlight-skin:a9723136-ee52-4182-98a7-d0aec15a9e24/marching/bust";
+// import kaicoyote from "starlight-skin:??/archer/bust";
+// import shblock from "starlight-skin:??/reading/bust";
+import spydnel from "starlight-skin:7e881452-4b55-4327-ba8f-037b8f568f85/kicking/bust";
+import mango from "starlight-skin:4806d760-2352-4975-829c-b48b2788efcd/crouching/bust";
 
 export {
     chaz,
@@ -55,4 +65,9 @@ export {
     robotix,
     emma,
     happyg,
+    llama,
+    // kaicoyote,
+    // shblock,
+    spydnel,
+    mango,
 };

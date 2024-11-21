@@ -5,5 +5,6 @@ export const handle: Handle = async ({ event, resolve }) => {
         transformPageChunk: ({ html }) =>
             html.replace("%unocss-svelte-scoped.global%", "unocss_svelte_scoped_global_styles"),
     });
+
     return response;
 };

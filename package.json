@@ -47,7 +47,6 @@
         "vite-plugin-image-optimizer": "^1.1.8"
     },
     "dependencies": {
-        "moment": "^2.30.1",
-        "svelte-inview": "^4.0.4"
+        "moment": "^2.30.1"
     }
 }

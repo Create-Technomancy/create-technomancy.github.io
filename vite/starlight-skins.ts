@@ -3,6 +3,8 @@ import fs from "fs";
 import crypto from "crypto";
 import type { Plugin } from "vite";
 
+export const PNG_HEADER = [137, 80, 78, 71, 13, 10, 26, 10];
+
 export type AllRenders = "full" | "bust" | "face";
 
 export interface RenderTypes {
@@ -48,6 +50,21 @@ export const fetchSkin = async <R extends keyof RenderTypes>(
     return await (await fetch(url)).arrayBuffer();
 };
 
+export const compareArrays = <T>(arr: T[], other: T[]) => {
+    if (arr.length != other.length) return false;
+
+    for (let i = 0; i < arr.length; i++) {
+        const a = arr[i];
+        const b = other[i];
+
+        if (a != b) {
+            return false;
+        }
+    }
+
+    return true;
+};
+
 export const starlightSkinPlugin = (): Plugin => {
     const prefix = "starlight-skin:";
     const base = path.dirname(import.meta.dirname);
@@ -66,7 +83,17 @@ export const starlightSkinPlugin = (): Plugin => {
     const downloadSkin = async (username: string, renderType: string, cropping: string) => {
         const filePath = path.join(cacheDir, username, renderType, cropping + ".png");
 
-        if (fs.existsSync(filePath)) return fs.readFileSync(filePath).buffer as ArrayBuffer;
+        if (fs.existsSync(filePath)) {
+            const data = fs.readFileSync(filePath).buffer as ArrayBuffer;
+            const head = [...new Uint8Array(data.slice(0, 8))];
+
+            if (compareArrays(head, PNG_HEADER)) {
+                return data;
+            } else {
+                console.log(`Image was not a PNG file: ${filePath}`);
+                console.log(`Expected [${PNG_HEADER}], got [${head}]`);
+            }
+        }
 
         const data = await fetchSkin(username, renderType as any, cropping);
 
@@ -81,6 +108,16 @@ export const starlightSkinPlugin = (): Plugin => {
 
     return {
         name: "starlight-skin-api",
+
+        configResolved(config) {
+            if (config.command == "build") {
+                if (fs.existsSync(cacheDir)) {
+                    fs.rmSync(cacheDir, { recursive: true });
+                }
+
+                fs.mkdirSync(cacheDir, { recursive: true });
+            }
+        },
 
         async resolveId(id) {
             if (id.startsWith(prefix)) {

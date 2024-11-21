@@ -16,6 +16,11 @@
         robotix,
         emma,
         happyg,
+        llama,
+        // kaicoyote,
+        // shblock,
+        spydnel,
+        mango,
     } from "$lib/team";
 
     import MetaTags from "../../components/MetaTags.svelte";
@@ -28,7 +33,7 @@
         { name: "RyanHCode", avatar: ryan, github: "RyanHCode" },
         { name: "VII", avatar: seven, github: "The7seVen" },
         { name: "rdh", avatar: rdh, github: "rhysdh540" },
-        { name: "Casey", avatar: casey }, // TODO: Find github
+        { name: "Casey", avatar: casey }, // github?
         { name: "RedstoneWizard08", avatar: redstone, github: "RedstoneWizard08" },
         { name: "KarlBH", avatar: karl, github: "jam-jar-binks" },
         { name: "HappyG", avatar: happyg, github: "happygill" },
@@ -41,6 +46,11 @@
         { name: "Maxigineer", avatar: max, github: "minMaximilian" },
         { name: "Robotix", avatar: robotix, github: "realRobotix" },
         { name: "EmmaTheMartian", avatar: emma, github: "EmmaTheMartian" },
+        { name: "LlamaMan", avatar: llama, github: "LlamaMan122" },
+        // { name: "KaiCoyote", avatar: kai, github: "KaiCoyote" },
+        // { name: "shBLOCK", avatar: shblock, github: "shBLOCK" },
+        { name: "Spydnel", avatar: spydnel, github: "Spydnel" },
+        { name: "DrMangoTea", avatar: mango, github: "DrMango14" },
     ];
 </script>
 
@@ -65,8 +75,8 @@
         </div>
     </div>
 
-    <div class="w-[75%] bg-slate-6 font-ubuntu p-8 mb-8 mt-8 rounded-lg">
-        <h1 class="mt-0">Contributors</h1>
+    <div class="w-[75%] bg-slate-6 font-ubuntu p-8 mb-16 mt-8 rounded-lg">
+        <h1 class="mt-0">Artists & Contributors</h1>
 
         <div class="grid grid-cols-[1fr] md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] gap-4">
             {#each contributors as { name, avatar, github }}

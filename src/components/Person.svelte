@@ -14,7 +14,12 @@
     >
         <img class="w-60 rounded-lg h-60 object-cover object-top" src={avatar} alt={name} />
         <p class="text-lg font-bold mb-0">{name}</p>
-        <p class="mt-0 color-blue-3">@{github}</p>
+        <div class="flex flex-row items-center justify-center mt-0">
+            <div class="i-bytesize-github fill-white mr-2"></div>
+            <p class="color-blue-3 m-0">
+                @{github}
+            </p>
+        </div>
     </a>
 {:else}
     <div
