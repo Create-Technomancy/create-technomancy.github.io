@@ -30,11 +30,11 @@
         { name: "rdh", avatar: rdh, github: "rhysdh540" },
         { name: "Casey", avatar: casey }, // TODO: Find github
         { name: "RedstoneWizard08", avatar: redstone, github: "RedstoneWizard08" },
+        { name: "KarlBH", avatar: karl, github: "jam-jar-binks" },
         { name: "HappyG", avatar: happyg, github: "happygill" },
     ];
 
     const contributors = [
-        { name: "KarlBH", avatar: karl, github: "jam-jar-binks" },
         { name: "LopyLuna", avatar: luna, github: "LopyLuna" },
         { name: "Kalibunni", avatar: kali, github: "Kalibunni" },
         { name: "MilkyFur", avatar: milky, github: "MilkyFur" },
