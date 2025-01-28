@@ -42,7 +42,6 @@
     const contributors = [
         { name: "LopyLuna", avatar: luna, github: "LopyLuna" },
         { name: "Kalibunni", avatar: kali, github: "Kalibunni" },
-        { name: "MilkyFur", avatar: milky, github: "MilkyFur" },
         { name: "Maxigineer", avatar: max, github: "minMaximilian" },
         { name: "Robotix", avatar: robotix, github: "realRobotix" },
         { name: "EmmaTheMartian", avatar: emma, github: "EmmaTheMartian" },
