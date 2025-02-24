@@ -6,19 +6,13 @@
         ryan,
         seven,
         rdh,
-        casey,
         redstone,
         karl,
-        luna,
         kali,
-        milky,
         max,
         robotix,
-        emma,
         happyg,
         llama,
-        // kaicoyote,
-        // shblock,
         spydnel,
         mango,
     } from "$lib/team";
@@ -33,21 +27,16 @@
         { name: "RyanHCode", avatar: ryan, github: "RyanHCode" },
         { name: "VII", avatar: seven, github: "The7seVen" },
         { name: "rdh", avatar: rdh, github: "rhysdh540" },
-        { name: "Casey", avatar: casey }, // github?
         { name: "RedstoneWizard08", avatar: redstone, github: "RedstoneWizard08" },
         { name: "KarlBH", avatar: karl, github: "jam-jar-binks" },
         { name: "HappyG", avatar: happyg, github: "happygill" },
     ];
 
     const contributors = [
-        { name: "LopyLuna", avatar: luna, github: "LopyLuna" },
         { name: "Kalibunni", avatar: kali, github: "Kalibunni" },
         { name: "Maxigineer", avatar: max, github: "minMaximilian" },
         { name: "Robotix", avatar: robotix, github: "realRobotix" },
-        { name: "EmmaTheMartian", avatar: emma, github: "EmmaTheMartian" },
         { name: "LlamaMan", avatar: llama, github: "LlamaMan122" },
-        // { name: "KaiCoyote", avatar: kai, github: "KaiCoyote" },
-        // { name: "shBLOCK", avatar: shblock, github: "shBLOCK" },
         { name: "Spydnel", avatar: spydnel, github: "Spydnel" },
         { name: "DrMangoTea", avatar: mango, github: "DrMango14" },
     ];
